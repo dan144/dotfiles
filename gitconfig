@@ -1,0 +1,15 @@
+[user]
+	name = Daniel Gross
+	email = dan.12sq@gmail.com
+[color]
+	ui = true
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[diff]
+    tool = vimdiff
+[alias]
+	diffword = diff --color-words
+	superlog = log --graph --decorate --all
+	supersmalllog = log --graph --decorate --oneline --all
+	pr = "!f() { git checkout master; git branch -D pr/$1 || true; git fetch upstream refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
